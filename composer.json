@@ -1,11 +1,11 @@
 {
-    "name": "a-le/dbal",
+    "name": "a-le/PDOwrapper",
     "description": "A simple yet efficient PDO wrapper",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "DBAL\\": "src/"
+            "a-le/PDOwrapper\\": "src/"
         }
     },
     "minimum-stability": "stable",
