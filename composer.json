@@ -1,0 +1,13 @@
+{
+    "name": "a-le/dbal",
+    "description": "A simple yet efficient PDO wrapper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DBAL\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {"php": ">=8.0"}
+}
