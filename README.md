@@ -5,8 +5,12 @@ This library is inspired by the [PDO Wrapper article](https://phpdelusions.net/p
 
 ## Features
 
-- Implements a [lightweight PDO wrapper](https://phpdelusions.net/pdo/pdo_wrapper).
-- Adds PHP 8 and PSR compatibility .
+- Implements a [simple yet efficient PDO wrapper](https://phpdelusions.net/pdo/pdo_wrapper).
+- Adds PHP 8 syntax.
+- Adheres to the following PHP Standards Recommendations (PSRs):
+  - [PSR-1: Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)
+  - [PSR-4: Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
+  - [PSR-12: Extended Coding Style Guide](https://www.php-fig.org/psr/psr-12/)
 - Adds some fetch helpers (`fetchFirstColumn`, `fetchAllObjects`, etc.).
 
 ## Usage

@@ -47,8 +47,8 @@ class PDOStatementWrapper extends PDOStatement
     /**
      * Fetches all rows from the result set as objects of a specified class.
      *
-     * @param string $className The name of the class to create objects of.
-     * @param array $constructorArgs An array of arguments to pass to the class constructor.
+     * @param string $className       The name of the class to create objects of.
+     * @param array  $constructorArgs An array of arguments to pass to the class constructor.
      *
      * @return array Returns an array of objects of the specified class.
      */
@@ -60,8 +60,8 @@ class PDOStatementWrapper extends PDOStatement
     /**
      * Fetches the next row from the result set as an object of a specified class.
      *
-     * @param string $className The name of the class to create an object of.
-     * @param array $constructorArgs An array of arguments to pass to the class constructor.
+     * @param string $className       The name of the class to create an object of.
+     * @param array  $constructorArgs An array of arguments to pass to the class constructor.
      *
      * @return object|false Returns an object of the specified class, or false if there are no more rows.
      */
