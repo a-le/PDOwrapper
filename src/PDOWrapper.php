@@ -8,13 +8,8 @@ use PDO;
 use PDOException;
 use function array_replace;
 
-class PDOWrapper
+class PDOWrapper extends PDO
 {
-    /**
-     * @var PDO The underlying PDO instance.
-     */
-    public $pdo;
-
     /**
      * PDOWrapper constructor.
      *
@@ -33,13 +28,8 @@ class PDOWrapper
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // Error reporting, let PDO throw an exception
         ];
         $options = array_replace($default_options, $options);
-
-        try {
-            $this->pdo = new PDO($dsn, $username, $password, $options);
-            $this->pdo->setAttribute(PDO::ATTR_STATEMENT_CLASS, [PDOStatementWrapper::class, [$this]]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
+        parent::__construct($dsn, $username, $password, $options);
+        $this->setAttribute(PDO::ATTR_STATEMENT_CLASS, [PDOStatementWrapper::class, [$this]]);
     }
 
     /**
@@ -52,7 +42,7 @@ class PDOWrapper
      */
     public function run(string $sql, array $args = []): PDOStatementWrapper|false
     {
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->prepare($sql);
         if ($stmt === false) {
             return false;
         }
