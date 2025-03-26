@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DBAL;
+namespace aLe\PDO;
 
 use PDO;
-use PDOException;
+use PDOStatement;
 use function array_replace;
 
 class PDOWrapper extends PDO
@@ -29,7 +29,6 @@ class PDOWrapper extends PDO
         ];
         $options = array_replace($default_options, $options);
         parent::__construct($dsn, $username, $password, $options);
-        $this->setAttribute(PDO::ATTR_STATEMENT_CLASS, [PDOStatementWrapper::class, [$this]]);
     }
 
     /**
@@ -38,9 +37,9 @@ class PDOWrapper extends PDO
      * @param string $sql  The SQL query to execute.
      * @param array  $args An array of arguments to bind to the query. Defaults to an empty array.
      *
-     * @return PDOStatementWrapper|false Returns a PDOStatementWrapper object on success, or false on failure.
+     * @return PDOStatement|false Returns a PDOStatement object on success, or false on failure.
      */
-    public function run(string $sql, array $args = []): PDOStatementWrapper|false
+    public function run(string $sql, array $args = []): PDOStatement|false
     {
         $stmt = $this->prepare($sql);
         if ($stmt === false) {

@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../src/PDOWrapper.php';
-require_once __DIR__ . '/../src/PDOStatementWrapper.php';
 
 /**
  * Simple assertion function for testing.
@@ -21,7 +20,7 @@ function assertEqual($expected, $actual, $message = '')
 }
 
 // Initialize PDOWrapper
-$pdo = new DBAL\PDOWrapper('sqlite::memory:');
+$pdo = new aLe\PDO\PDOWrapper('sqlite::memory:');
 
 // Test table creation
 $pdo->run('CREATE TABLE test_table (name TEXT, age INTEGER)');
