@@ -1,8 +1,7 @@
-# DBAL Library
+# PDO wrapper
 
 A simple yet efficient PDO wrapper.
 This library is a modernized version of the original [PDO Wrapper](https://phpdelusions.net/pdo/pdo_wrapper) from phpdelusions.net.  
-
 
 ## Features
 
