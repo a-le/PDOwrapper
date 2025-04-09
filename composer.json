@@ -5,9 +5,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "a-le/PDOwrapper\\": "src/"
+            "aLe/": "src/"
         }
     },
     "minimum-stability": "stable",
-    "require": {"php": ">=8.0"}
+    "require": {"php": ">=8.2"}
 }

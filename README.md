@@ -11,7 +11,6 @@ This library is a modernized version of the original [PDO Wrapper](https://phpde
   - [PSR-1: Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)
   - [PSR-4: Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
   - [PSR-12: Extended Coding Style Guide](https://www.php-fig.org/psr/psr-12/)
-- Adds some tests.
 
 ## Usage
 

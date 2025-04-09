@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace aLe\PDO;
+namespace aLe;
 
 use PDO;
 use PDOStatement;
